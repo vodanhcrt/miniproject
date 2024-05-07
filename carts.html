@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giỏ hàng - Nội thất</title>
+    
+    <link rel='stylesheet' href='css?family=Roboto%3A400%2C500%2C700%2C900&#038;display=swap&#038;ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/fontawesome-pro-5.0.13.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/animate.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/bootstrap.min.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/mdb.lite.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/owl.carousel.min.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/owl.theme.default.min.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/mmenu.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/style.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/util.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/responsive.css?ver=0.1.0' type='text/css' >
+    <link rel='stylesheet' href='css/main.css?ver=0.1.0' type='text/css' >
+    
+   
+</head>
+
+<body>
+    <div include-html="header.html"></div>
+
+     <!-- end section -->
+    <div class="container">
+        <ul class="breadcrumb">
+            <span><span><a href="index.html">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Giỏ hàng</span></span></span> </ul>
+    </div>
+    <div class="container">
+        <div id="carts-page">
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <h2 class="mb-3">Giỏ hàng</h2>
+                    <div class="table-responsive">
+                        <table border="1" width="100%" class="my-4 table-carts">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Ảnh</th>
+                                    <th> Sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4 class="mb-4">Thông tin đặt hàng</h4>
+                    <form class="form-order">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Họ tên" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Điện thoại" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="address" placeholder="Địa chỉ" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn  btn-danger py-2"> Đặt hàng</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+    <div include-html="footer.html"></div>
+    <!-- Menu on mobile -->
+    <nav id="menu" class="menu-mobile-wrap">
+        <ul id="panel-menu" class="">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="sanpham.html">Sản phẩm</a>
+            </li>
+            <li><a href="duan">Dự án</a></li>
+            <li><a href="tintuc">Tin tức</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+    <!-- End menu on mobile -->
+    <script type='text/javascript' src='js/jquery-3.4.1.min.js?ver=0.1.0' ></script>
+    <script type='text/javascript' src='js/lazysizes-umd.min.js?ver=0.1.0' ></script>
+    <script type='text/javascript' src='js/bootstrap.min.js?ver=0.1.0' ></script>
+    <script type='text/javascript' src='js/mdb.lite.min.js?ver=0.1.0' ></script>
+    <script type='text/javascript' src='js/owl.carousel.min.js?ver=0.1.0' ></script>
+    <script type='text/javascript' src='js/mmenu.js?ver=0.1.0' ></script>
+    <script type='text/javascript' src='js/main.js?ver=0.1.0'></script>
+
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("include-html");
+                  includeHTML();
+                }
+              }
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+        includeHTML();
+    </script>   
+    
+</body>
+
+</html>
